@@ -1,0 +1,23 @@
+{
+  "name": "berg-version",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">\r   <a href=\"https://www.youtube.com/watch?v=0sTfIZvjYJk&list=PLMdYygf53DP5SVQQrkKCVWDS0TwYLVitL&index=2\">\r     <img src=\"https://raw.githubusercontent.com/filipedeschamps/meu-primeiro-jogo-multiplayer/master/game-preview.gif\" width=\"550\">\r   </a>\r </p>",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagobergami/multiplayerGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thiagobergami/multiplayerGame/issues"
+  },
+  "homepage": "https://github.com/thiagobergami/multiplayerGame#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "type": "module"
+}
