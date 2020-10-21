@@ -1,8 +1,14 @@
 export default function createKeyBoardListener(document) {
     //Lista dos observers
     const state = {
-        observers: []
+        observers: [],
+        playerId: null
     }
+
+    function registerPlayer(playerId){
+        state.playerId = playerId
+    }
+
     //Recebe uma função observe. Essa é a forma que um subject lê um observer
     function subscribe(observerFunction) {
         state.observers.push(observerFunction)
@@ -24,12 +30,14 @@ export default function createKeyBoardListener(document) {
         const keyPressed = event.key
 
         const command = {
-            playerId: 'player1',
+            type: 'move-player',
+            playerId: state.playerId,
             keyPressed
         }
         notifyAll(command)
     }
     return {
-        subscribe
+        subscribe,
+        registerPlayer
     }
 }
