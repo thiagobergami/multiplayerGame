@@ -14,6 +14,7 @@
             height: 400px;
         }
     </style>
+    <script src="/socket.io/socket.io.js"></script>
 </head>
 
 <body>
@@ -34,6 +35,19 @@
         const screen = document.getElementById('screen')
         renderScreen(screen, game, requestAnimationFrame)
 
+        const socket = io()
+
+        socket.on('connect', () => {
+            const playerId = socket.id
+            console.log(`Player connected on Client with id: ${playerId}`)
+        })
+
+        socket.on('setup', (state)=> {
+            console.log(`> Receinving "setup" event from server`)
+            console.log(state)
+
+            game.state = state
+        })
     </script>
 </body>
 
